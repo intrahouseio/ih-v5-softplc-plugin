@@ -1,0 +1,36 @@
+{
+  "grid": [
+    { "id": "p1", "xs": 6, "class": "main", "table": "units" },
+    { "id": "p2", "xs": 6, "class": "main", "table": "units", "height": 200  },
+    { "id": "p3", "xs": 12, "class": "main", "table": "units", "height": 200  },
+    { "id": "p4", "xs": 12, "class": "main", "table": "units", "height": 500  }
+  ],
+
+  "spacing": 10,
+
+  "p1": [
+    {
+      "prop": "period",
+      "title": "Период цикла для запуска скрипта мс",
+      "default": 500,
+      "type": "number"
+    }
+  ],
+
+  "p2": [
+    {
+      "title": "Устройства",
+      "type": "table",
+      "prop": "devs",
+      "genfield": "props",
+      "popupenable": true,
+      "columns": [{ "prop": "did", "title": "Устройство", "type": "droplist", "data": "deviceList", "width": 300 }]
+    }
+  ],
+  "p3": [
+    { "prop": "plcvars", "title": "VARS", "type": "script" }
+  ],
+  "p4": [
+    { "prop": "plcmain", "title": "MAIN", "type": "script" }
+  ]
+}
